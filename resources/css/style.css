@@ -19,6 +19,18 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+/*clears float after an element.. add to <ul class="meals-showcase clearfix">*/
+/*<li> aka children of <ul> are ones who have float property*/
+/*clearfix class applied to <ul> element & :after ensures that float right after  <ul> element is cleared*/
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 
 
 /* ----------------------------------------- */
@@ -198,4 +210,123 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
+}
+
+
+
+/* ----------------------------------------- */
+/* FEATURES */
+/* ----------------------------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+
+
+/* ----------------------------------------- */
+/* MEALS */
+/* ----------------------------------------- */
+
+.section-meals {
+/* to override .section padding-top */
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+/* to hide img's overflow/coming out of its container <figure class='meal-photo'> */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img {
+/* making imgs darker by changing opacity to 70% and <figure>'s background-color to black*/
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+/* css3 property transform: img will be 115% / zoomed in a bit */
+    transform: scale(1.15);
+/* to animate */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* hover state to change transform property, back to normal scale/size & opacity back to 100%. Animation goes into original state (above), not hover state */
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+
+/* ----------------------------------------- */
+/* HOW IT WORKS */
+/* ----------------------------------------- */
+
+/*subtle background color to this section*/
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 15%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-right: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 50%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+/*selects element with class of works-step that occurs last in html*/
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+/*  adjusting properties of number inside circle */
+    color: #e67e22;
+    padding: 5px;
+    font-size: 150%;
+    text-align: center;
+    
+/*  creating circle around numbers! */
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    margin-right: 25px;
+    
+/* takes away div's forced line break, so number can be side by side with text*/
+    display: inline-block;
+    float: left;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
