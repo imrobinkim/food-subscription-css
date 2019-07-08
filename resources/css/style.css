@@ -520,3 +520,28 @@ input[type="checkbox"] {
 }
 
 *:focus {outline: none}
+
+
+
+/* ----------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------- */
+footer {
+    background-color: #383838;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-icons {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-icons li {
+    display: inline-block;
+    margin-right: 20px;
+}
