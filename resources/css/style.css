@@ -10,13 +10,15 @@
     box-sizing: border-box;
 }
 
-html {
+html, 
+body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 /*clears float after an element.. add to <ul class="meals-showcase clearfix">*/
@@ -256,9 +258,7 @@ header {
 /* FEATURES */
 /* ----------------------------------------- */
 
-.section-features .long-copy {
-    margin-bottom: 30px;
-}
+.section-features .long-copy { margin-bottom: 30px; }
 
 
 
@@ -331,13 +331,9 @@ header {
     margin-top: 70px;
 }
 
-.app-screen {
-    width: 50%;
-}
+.app-screen { width: 50%; }
 
-.works-step {
-    margin-bottom: 50px;
-}
+.works-step { margin-bottom: 50px; }
 
 /*selects element with class of works-step that occurs last in html*/
 .works-step:last-of-type {
@@ -385,9 +381,7 @@ header {
     margin-bottom: 15px;
 }
 
-.city-feature {
-    margin-bottom: 5px;
-}
+.city-feature { margin-bottom: 5px; }
 
 
 
