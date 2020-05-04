@@ -112,7 +112,7 @@ h2:after {
     font-size: 350%;
     display: block;
     color: #e67e22;
-    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
 }
 
 .icon-small {
@@ -225,6 +225,16 @@ header {
     margin-top: 20px;
 }
 
+.logo-black { 
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+
+/* Main nav */
 .main-nav {
     float: right;
     list-style: none;
@@ -232,7 +242,7 @@ header {
 }
 
 .main-nav li {
-    display: inline;
+    display: inline-block;
     margin-left: 40px;
 }
 
@@ -244,6 +254,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
@@ -252,6 +263,42 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+
+/* Mobile nav */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* Sticky nav */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
 
 
 /* ----------------------------------------- */
@@ -596,4 +643,27 @@ footer p {
     color: #888;
     text-align: center;
     margin-top: 20px;
+}
+
+
+
+/* ----------------------------------------- */
+/* ANIMATIONS */
+/* ----------------------------------------- */
+.js--wp-1,
+.js--wp-2, 
+.js--wp-3 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    animation-duration: 1s;
+}
+
+/*selects element that has both .js--wp-1 AND .animated classes*/
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
 }
